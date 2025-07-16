@@ -1,14 +1,5 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Scripts Organizer',
   tagline: 'Dinosaurs are cool',
@@ -20,7 +11,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://dplugins-docs.github.io',
+  url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/scripts-organizer/',
