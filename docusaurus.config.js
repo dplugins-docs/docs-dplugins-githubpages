@@ -27,7 +27,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
+  organizationName: 'dplugins-docs', // Usually your GitHub org/user name.
   projectName: 'scripts-organizer', // Usually your repo name.
   
   deploymentBranch: 'gh-pages',
@@ -97,7 +97,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/dplugins-docs/scripts-organizer',
             label: 'GitHub',
             position: 'right',
           },
@@ -141,7 +141,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/dplugins-docs/scripts-organizer',
               },
             ],
           },
