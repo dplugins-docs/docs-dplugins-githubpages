@@ -53,6 +53,22 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        docsDir: 'docs',
+        docsRouteBasePath: 'docs',
+        indexDocs: true,
+        indexPages: false,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchBarPosition: 'right',
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -72,7 +88,10 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-
+          {
+            type: 'search',
+            position: 'right',
+          },
           {
             href: 'https://github.com/dplugins-docs/scripts-organizer',
             label: 'GitHub',
@@ -125,6 +144,8 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+
+
     }),
 };
 
