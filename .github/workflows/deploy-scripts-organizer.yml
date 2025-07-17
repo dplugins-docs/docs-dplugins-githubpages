@@ -30,16 +30,9 @@ jobs:
       - name: Build
         run: cd scripts-organizer && npm run build
       
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: scripts-organizer/build
-      
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./scripts-organizer/build 
+          publish_dir: ./scripts-organizer/build
+          destination_dir: scripts-organizer 
