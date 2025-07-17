@@ -90,12 +90,7 @@ const config = {
           {
             type: 'search',
             position: 'right',
-          },
-          {
-            href: 'https://github.com/dplugins-docs/scripts-organizer',
-            label: 'GitHub',
-            position: 'right',
-          },
+          }
         ],
       },
       footer: {
