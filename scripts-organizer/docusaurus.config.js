@@ -14,12 +14,12 @@ const config = {
   url: 'https://testdocs.dplugins.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/scripts-organizer/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'dplugins-docs', // Usually your GitHub org/user name.
-  projectName: 'scripts-organizer', // Usually your repo name.
+  projectName: 'docs-dplugins-githubpages', // Usually your repo name.
   
   deploymentBranch: 'gh-pages',
 
