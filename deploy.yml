@@ -1,0 +1,69 @@
+name: Deploy All Sites
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'scripts-organizer/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+      
+      - name: Find Docusaurus sites
+        id: find-sites
+        run: |
+          # Find all directories that contain docusaurus.config.js (excluding scripts-organizer)
+          SITES=$(find . -maxdepth 2 -name "docusaurus.config.js" -exec dirname {} \; | sed 's|^\./||' | grep -v "scripts-organizer" | sort)
+          echo "Found sites: $SITES"
+          echo "sites=$SITES" >> $GITHUB_OUTPUT
+      
+      - name: Build all sites
+        run: |
+          SITES="${{ steps.find-sites.outputs.sites }}"
+          for site in $SITES; do
+            echo "Building site: $site"
+            cd "$site"
+            npm ci
+            npm run build
+            cd ..
+          done
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Create combined build directory
+        run: |
+          mkdir -p combined-build
+          SITES="${{ steps.find-sites.outputs.sites }}"
+          for site in $SITES; do
+            if [ -d "$site/build" ]; then
+              # Copy site to subdirectory in combined build
+              cp -r "$site/build" "combined-build/$site"
+            fi
+          done
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: combined-build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./combined-build
+        
