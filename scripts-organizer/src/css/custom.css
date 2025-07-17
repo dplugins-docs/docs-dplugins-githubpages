@@ -104,12 +104,3 @@ h1 {
   font-size: 3.5rem;
 }
 
-/* Ensure only one footer is displayed */
-footer {
-  position: relative;
-}
-
-/* Hide duplicate footers if they exist */
-footer + footer {
-  display: none;
-}
