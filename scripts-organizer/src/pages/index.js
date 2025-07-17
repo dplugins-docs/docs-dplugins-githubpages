@@ -23,10 +23,7 @@ function HomepageHeader() {
             to="/docs/intro">
             Get started
           </Link>
-        </div>
-        <div className={styles.searchContainer}>
-          <SearchBar />
-        </div>
+        </div>        
       </div>
     </header>
   );
@@ -36,8 +33,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} | Documentation`}
+      description="Create fully customizable code snippets for your posts, user profiles, settings pages, and more.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

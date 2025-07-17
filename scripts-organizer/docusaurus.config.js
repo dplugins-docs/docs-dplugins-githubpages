@@ -85,7 +85,22 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Documentation',
+            label: 'Intro',
+            href: '/docs/intro',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Basics',
+            href: '/docs/category/basics',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Extras',
+            href: '/docs/category/extras',
           },
           {
             type: 'search',
@@ -97,11 +112,85 @@ const config = {
         style: 'light',
         links: [
           {
-            title: 'Docs',
+            title: 'Learn',
             items: [
               {
-                label: 'Documentation',
-                to: 'docs/intro',
+                label: 'Blog',
+                href: 'https://updates.dplugins.com/',
+              },
+              {
+                label: 'Code Snippets',
+                href: 'https://code.dplugins.com/',
+              },
+              {
+                label: 'WP Tailwing Hero',
+                href: 'https://wptailwindhero.com/',
+              },
+            ],
+          },         
+          {
+            title: 'Premium Plugins',
+            items: [
+              {
+                label: 'Scripts Organizer',
+                href: 'https://dplugins.com/downloads/scripts-organizer/',
+              },
+              {
+                label: 'Self Hoster',
+                href: 'https://dplugins.com/downloads/hoster/',
+              },
+              {
+                label: 'WP Admin Cleaner',
+                href: 'https://dplugins.com/downloads/wp-admin-cleaner/',
+              },
+              {
+                label: 'Winden',
+                href: 'https://dplugins.com/downloads/winden/',
+              },
+              {
+                label: 'DevKit',
+                href: 'https://dplugins.com/downloads/devkit/',
+              },
+              {
+                label: 'Font Hero',
+                href: 'https://dplugins.com/downloads/font-hero/',
+              },
+              {
+                label: 'Swiss Knife Bricks',
+                href: 'https://dplugins.com/downloads/swiss-knife-bricks/',
+              },
+              {
+                label: 'Swiss Knife Oxygen',
+                href: 'https://dplugins.com/downloads/swiss-knife/',
+              },
+              {
+                label: 'Collaboration',
+                href: 'https://dplugins.com/downloads/collaboration/',
+              },      
+              {
+                label: 'Gutenberg Plain Classes',
+                href: 'https://dplugins.com/downloads/plain-classes-gutenberg/',
+              },
+            ],
+          },
+          {
+            title: 'Gutenberg Blocks',
+            items: [
+              {
+                label: 'Lazyload for YouTube',
+                href: 'https://wordpress.org/plugins/dblocks-youtube-lazyload/',
+              },
+              {
+                label: 'DBlocks Finder',
+                href: 'https://wordpress.org/plugins/dblocks-finder/',
+              },
+              {
+                label: 'DBlocks CodePro',
+                href: 'https://wordpress.org/plugins/dblocks-codepro/',
+              },
+              {
+                label: 'DBlocks Hotspot',
+                href: 'https://wordpress.org/plugins/dblocks-hotspot/',
               },
             ],
           },
@@ -109,26 +198,18 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Facebook',
+                href: 'https://www.facebook.com/groups/dplugins',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Youtube',
+                href: 'https://www.youtube.com/@DPlugins',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Support',
+                href: 'https://support.dplugins.com/',
               },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/dplugins-docs/docs-dplugins-githubpages',
-              },
+              
             ],
           },
         ],
