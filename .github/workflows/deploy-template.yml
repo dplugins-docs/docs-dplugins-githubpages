@@ -1,0 +1,45 @@
+name: Deploy [SITE-NAME]
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '[SITE-DIRECTORY]/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+          cache-dependency-path: [SITE-DIRECTORY]/package-lock.json
+      
+      - name: Install dependencies
+        run: cd [SITE-DIRECTORY] && npm ci
+      
+      - name: Build
+        run: cd [SITE-DIRECTORY] && npm run build
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: [SITE-DIRECTORY]/build
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./[SITE-DIRECTORY]/build 
