@@ -48,12 +48,13 @@ const config = {
         },
 
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.scss',
         },
       }),
     ],
   ],
   plugins: [
+    'docusaurus-plugin-sass',
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
@@ -213,7 +214,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} DPlugins. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DPlugins.`,
       },
       prism: {
         theme: prismThemes.github,

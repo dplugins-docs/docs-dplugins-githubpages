@@ -1,0 +1,9 @@
+[data-theme="dark"] .theme-doc-sidebar-menu.menu__list img,
+[data-theme="dark"] .navbar__logo img  {
+  filter: invert(1);
+}
+
+.menu__caret:before {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.4rem 1.4rem;
+}
+

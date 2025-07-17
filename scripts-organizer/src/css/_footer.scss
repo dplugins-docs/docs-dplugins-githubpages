@@ -1,0 +1,24 @@
+footer.footer {
+    background-color: transparent;
+    border-top: 1px solid var(--ifm-toc-border-color);
+    padding: 0;
+
+    .container {
+        max-width: 100% !important;
+    }
+
+    .footer__links {
+        max-width: var(--ifm-container-width-xl);
+        margin: 3rem auto;
+    }
+
+    .footer__copyright {
+        border-top: 1px solid var(--ifm-toc-border-color);
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+
+    .footer__item svg {
+        display: none;
+    }
+}
