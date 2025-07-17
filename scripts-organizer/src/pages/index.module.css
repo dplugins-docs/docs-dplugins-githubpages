@@ -20,4 +20,46 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.searchContainer > div {
+  width: 100%;
+}
+
+.searchContainer input {
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.searchContainer input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.searchContainer input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .searchContainer {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 }
