@@ -28,7 +28,18 @@ jobs:
         run: cd scripts-organizer && npm ci
       
       - name: Build
-        run: cd scripts-organizer && npm run build
+        run: |
+          cd scripts-organizer
+          npm run build
+          ls -la build/
+          echo "Build completed successfully"
+      
+      - name: Verify build
+        run: |
+          cd scripts-organizer
+          echo "Checking build contents:"
+          find build/ -type f -name "*.html" | head -10
+          echo "Build verification completed"
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
