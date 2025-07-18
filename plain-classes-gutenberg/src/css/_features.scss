@@ -1,0 +1,41 @@
+.row:has(.feature-card) {
+    gap: 3rem;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.feature-card {
+    background-color: var(--ifm-color-emphasis-0);;
+    outline: 1px solid var(--ifm-color-emphasis-200);
+    outline-offset: 10px;
+    border: 1px solid var(--ifm-color-emphasis-500);;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 0.5rem;
+    padding-bottom: 1rem;
+
+    .button {
+        // color: var(--ifm-color-gray-100) !important;
+        border: 1px solid var(--ifm-color-gray-300);
+    }
+}
+
+main:has(.feature-card) {
+    background-color: var(--ifm-color-emphasis-100);
+}
+
+.hero--primary {
+    background-color: #0054dc;
+    color: white;
+
+    background-image:
+    linear-gradient(to right, #ffffff35 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff15  1px, transparent 1px);
+    background-size: 4rem 4rem;
+
+    .button {
+        color: black;
+    }
+}
