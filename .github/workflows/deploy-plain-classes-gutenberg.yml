@@ -47,4 +47,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./plain-classes-gutenberg/build
           destination_dir: plain-classes-gutenberg
-          force_orphan: false 
