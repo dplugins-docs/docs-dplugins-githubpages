@@ -1,4 +1,4 @@
-name: Deploy Scripts Organizer
+name: Deploy Plain Classes Gutenberg
 
 on:
   push:
@@ -46,4 +46,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./plain-classes-gutenberg/build
-          destination_dir: plain-classes-gutenberg 
+          destination_dir: plain-classes-gutenberg
+          force_orphan: false 
